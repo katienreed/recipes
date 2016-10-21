@@ -1,3 +1,236 @@
-// Place all the styles related to the Home controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+.stage {
+  width: 200px; height: 125px;
+  -webkit-perspective: 1600px;
+  -webkit-perspective-origin: 50% -240px;
+  margin: 0 auto;
+  position: relative;
+  top: 100px;
+  right: 30px;
+}
+
+figure {
+  display: block; position: absolute;
+  width: 200px; height: 125px;
+  border: 1px #000 solid;
+  -webkit-transform-origin: 50% 50% 0;
+}
+
+.cube {
+  -webkit-transform-style: preserve-3d;
+  transform: rotateY(35deg);
+}
+figure { -webkit-transform-origin: 50% 50% 0; }
+
+.front {
+  -webkit-transform: translateZ(100px);
+  background: #ee8c25 linear-gradient(
+  to right, #ee8c25 0%, #ee8c25 10%, #e28523 10%, #e28523 20%, #d17b21 19%, #d67e21 21%, #d67e21 20%, #d67e21 30%, #c6741f 29%, #ca7720 31%, #ca7720 30%, #ca7720 40%, #ba6d1d 39%,
+  #be701e 41%, #be701e 40%, #be701e 50%, #ae661b 49%, #b2691c 51%, #b2691c 50%, #b2691c 60%, #a25f19 59%, #a7621a 61%, #a7621a 60%, #a7621a 70%, #965817 69%, #9b5b18 71%, #9b5b18 70%,
+  #9b5b18 80%, #8a5116 79%, #8f5416 81%, #8f5416 80%, #8f5416 90%, #7e4a14 89%, #834d14 91%, #834d14 90%, #834d14 100%);
+}
+
+.back {
+  -webkit-transform: rotateY(180deg) translateZ(100px);
+  background: #ee8c25 linear-gradient(
+  to right, #ee8c25 0%, #ee8c25 10%, #e28523 10%, #e28523 20%, #d17b21 19%, #d67e21 21%, #d67e21 20%, #d67e21 30%, #c6741f 29%, #ca7720 31%, #ca7720 30%, #ca7720 40%, #ba6d1d 39%,
+  #be701e 41%, #be701e 40%, #be701e 50%, #ae661b 49%, #b2691c 51%, #b2691c 50%, #b2691c 60%, #a25f19 59%, #a7621a 61%, #a7621a 60%, #a7621a 70%, #965817 69%, #9b5b18 71%, #9b5b18 70%,
+  #9b5b18 80%, #8a5116 79%, #8f5416 81%, #8f5416 80%, #8f5416 90%, #7e4a14 89%, #834d14 91%, #834d14 90%, #834d14 100%);
+}
+
+.left {
+  -webkit-transform: rotateY(-90deg) translateZ(100px);
+  background: #ee8c25 linear-gradient(
+  to left, #ee8c25 0%, #ee8c25 10%, #e28523 10%, #e28523 20%, #d17b21 19%, #d67e21 21%, #d67e21 20%, #d67e21 30%, #c6741f 29%, #ca7720 31%, #ca7720 30%, #ca7720 40%, #ba6d1d 39%,
+  #be701e 41%, #be701e 40%, #be701e 50%, #ae661b 49%, #b2691c 51%, #b2691c 50%, #b2691c 60%, #a25f19 59%, #a7621a 61%, #a7621a 60%, #a7621a 70%, #965817 69%, #9b5b18 71%, #9b5b18 70%,
+  #9b5b18 80%, #8a5116 79%, #8f5416 81%, #8f5416 80%, #8f5416 90%, #7e4a14 89%, #834d14 91%, #834d14 90%, #834d14 100%);
+}
+
+.right {
+  -webkit-transform: rotateY(90deg) translateZ(100px);
+  background: #ee8c25 linear-gradient(
+  to left, #ee8c25 0%, #ee8c25 10%, #e28523 10%, #e28523 20%, #d17b21 19%, #d67e21 21%, #d67e21 20%, #d67e21 30%, #c6741f 29%, #ca7720 31%, #ca7720 30%, #ca7720 40%, #ba6d1d 39%,
+  #be701e 41%, #be701e 40%, #be701e 50%, #ae661b 49%, #b2691c 51%, #b2691c 50%, #b2691c 60%, #a25f19 59%, #a7621a 61%, #a7621a 60%, #a7621a 70%, #965817 69%, #9b5b18 71%, #9b5b18 70%,
+  #9b5b18 80%, #8a5116 79%, #8f5416 81%, #8f5416 80%, #8f5416 90%, #7e4a14 89%, #834d14 91%, #834d14 90%, #834d14 100%);
+}
+
+.post-it {
+  background:#fefabc;
+  padding:15px;
+  font-family: 'Gloria Hallelujah', cursive;
+  font-size:15px;
+  color: #000;
+  width:110px;
+
+  -moz-transform: rotate(-9deg);
+  -webkit-transform: rotate(-9deg);
+  -o-transform: rotate(-9deg);
+  -ms-transform: rotate(-9deg);
+  transform: rotate(-9deg);
+
+  box-shadow: 0px 4px 6px #333;
+  -moz-box-shadow: 0px 4px 6px #333;
+  -webkit-box-shadow: 0px 4px 6px #333;
+
+  position: relative;
+  left: 462px;
+  bottom: -38px;
+}
+
+.divider {
+  -webkit-transform: translateZ(92px);
+  background: #f5f5dc;
+  top: -11px;
+  height: 30px;
+}
+
+.divider2 {
+  -webkit-transform: translateZ(57px);
+  background: #f5f5dc;
+  top: -11px;
+  height: 30px;
+}
+
+.divider3 {
+  -webkit-transform: translateZ(20px);
+  background: #f5f5dc;
+  top: -11px;
+  height: 30px;
+}
+
+.label {
+  -webkit-transform: translateZ(92px);
+  background: #f5f5dc;
+  top: -19px;
+  height: 14px;
+  width: 80px;
+  border-bottom: none;
+  font-family: 'Courier New';
+  font-size: 11px;
+}
+
+.label2 {
+  -webkit-transform: translateZ(57px);
+  background: #f5f5dc;
+  top: -19px;
+  height: 14px;
+  width: 80px;
+  border-bottom: none;
+  font-family: 'Courier New';
+  font-size: 11px;
+}
+
+.label3 {
+  -webkit-transform: translateZ(20px);
+  background: #f5f5dc;
+  top: -19px;
+  height: 14px;
+  width: 80px;
+  border-bottom: none;
+  font-family: 'Courier New';
+  font-size: 11px;
+}
+
+.card {
+  -webkit-transform: translateZ(82px);
+  background: #FFF;
+  top: 0px;
+  height: 30px;
+  z-index: 1;
+  right: -40px;
+  font-size:10px;
+}
+
+.card2 {
+  -webkit-transform: translateZ(75px);
+  background: #FFF;
+  top: -20px;
+  z-index: 1;
+  left: 0px;
+}
+
+.card3 {
+  -webkit-transform: translateZ(68px);
+  background: #FFF;
+  top: -20px;
+  z-index: 1;
+  left: 0px;
+}
+
+.card4 {
+  -webkit-transform: translateZ(54px);
+  background: #FFF;
+  top: -20px;
+  z-index: 1;
+  left: 0px;
+}
+
+.card5 {
+  -webkit-transform: translateZ(50px);
+  background: #FFF;
+  top: -20px;
+  z-index: 1;
+  left: 0px;
+}
+
+.card6 {
+  -webkit-transform: translateZ(47px);
+  background: #FFF;
+  top: -20px;
+  z-index: 1;
+  left: 0px;
+}
+
+.card7 {
+  -webkit-transform: translateZ(39px);
+  background: #FFF;
+  top: -20px;
+  z-index: 1;
+  left: 0px;
+}
+
+.card8 {
+  -webkit-transform: translateZ(29px);
+  background: #FFF;
+  top: -20px;
+  z-index: 1;
+  left: 0px;
+}
+
+.card:hover {
+  top: -16px;
+  cursor: pointer;
+}
+
+.card2:hover {
+  top: -18px;
+  cursor: pointer;
+}
+
+.card3:hover {
+  top: -18px;
+  cursor: pointer;
+}
+.card4:hover {
+  top: -18px;
+  cursor: pointer;
+}
+.card5:hover {
+  top: -18px;
+  cursor: pointer;
+}
+.card6:hover {
+  top: -18px;
+  cursor: pointer;
+}
+.card7:hover {
+  top: -18px;
+  cursor: pointer;
+}
+.card8:hover {
+  top: -18px;
+  cursor: pointer;
+}
+.card:hover {
+  top: -18px;
+  cursor: pointer;
+}

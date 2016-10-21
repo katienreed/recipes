@@ -1,2 +1,25 @@
-<h1>This is the home page :)</h1>
-<%= link_to 'My Recipes', controller: 'recipes' %>
+<%= link_to 'recipes' do %>
+  <div class="stage">
+    <div class="cube">
+      <figure class="back"></figure>
+      <figure class="left"></figure>
+      <figure class="right"></figure>
+      <figure class="front"></figure>
+      <figure class="divider"></figure>
+      <figure class="label"><div style="padding-left:3px">Baking</div></figure>
+      <figure class="card"><div style="padding-right:3px; text-align:right;">Almond Cookies</div></figure>
+      <figure class="card2"></figure>
+      <figure class="card3"></figure>
+      <figure class="divider2"></figure>
+      <figure class="label2"><div style="padding-left:3px">Appetizers</div></figure>
+      <figure class="card4"></figure>
+      <figure class="card5"></figure>
+      <figure class="card6"></figure>
+      <figure class="card7"></figure>
+      <figure class="card8"></figure>
+      <figure class="divider3"></figure>
+      <figure class="label3"><div style="padding-left:3px">Main Courses</div></figure>
+    </div>
+  </div>
+  <div class="post-it">Recipe Box</figure>
+<% end %>
