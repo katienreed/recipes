@@ -7,6 +7,98 @@
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
+  <header>
+    <ul id="slide-out" class="side-nav fixed">
+      <li class="bold"><a href="#!">Appetizers</a></li>
+      <li class="bold"><a href="#!">Poultry</a></li>
+      <li class="bold"><a href="#!">Seafood</a></li>
+      <li class="bold"><a href="#!">Meat</a></li>
+      <li class="bold"><a href="#!">Baking</a></li>
+      <li class="bold"><a href="#!">Dessert</a></li>
+     </ul>
+     <a href="#" data-activates="slide-out" class="button-collapse"><i class="material-icons">menu</i></a>
+
+     <%= link_to 'recipes' do %>
+       <div class="stage">
+         <div class="cube">
+           <figure class="back"></figure>
+           <figure class="left"></figure>
+           <figure class="right"></figure>
+           <figure class="front"></figure>
+           <figure class="divider"></figure>
+           <figure class="label"><div style="padding-left:3px">Baking</div></figure>
+           <figure class="card">
+             <div style="padding-right:3px; text-align:right;">
+               Almond Cookies
+               <div class="red-line-separator"></div>
+               <div class="blue-line-separator"></div>
+               <div class="blue-line-separator"></div>
+               <div class="blue-line-separator"></div>
+             </div>
+           </figure>
+           <figure class="card2">
+             <div style="padding-right:3px; text-align:right;">
+               Banana Bread
+               <div class="red-line-separator"></div>
+               <div class="blue-line-separator"></div>
+               <div class="blue-line-separator"></div>
+               <div class="blue-line-separator"></div>
+             </div>
+           </figure>
+           <figure class="card3">
+             <div style="padding-right:3px; text-align:right;">
+               Cupcakes
+               <div class="red-line-separator"></div>
+               <div class="blue-line-separator"></div>
+               <div class="blue-line-separator"></div>
+               <div class="blue-line-separator"></div>
+             </div>
+           </figure>
+           <figure class="divider2"></figure>
+           <figure class="label2"><div style="padding-left:3px">Entrees</div></figure>
+           <figure class="card4">
+             <div style="padding-right:3px; text-align:right;">
+               Salmon
+               <div class="red-line-separator"></div>
+               <div class="blue-line-separator"></div>
+               <div class="blue-line-separator"></div>
+               <div class="blue-line-separator"></div>
+             </div>
+           </figure>
+           <figure class="card5">
+             <div style="padding-right:3px; text-align:right;">
+               Filet Mignon
+               <div class="red-line-separator"></div>
+               <div class="blue-line-separator"></div>
+               <div class="blue-line-separator"></div>
+               <div class="blue-line-separator"></div>
+             </div>
+           </figure>
+           <figure class="card6">
+             <div style="padding-right:3px; text-align:right;">
+               Pasta
+               <div class="red-line-separator"></div>
+               <div class="blue-line-separator"></div>
+               <div class="blue-line-separator"></div>
+               <div class="blue-line-separator"></div>
+             </div>
+           </figure>
+           <figure class="divider3"></figure>
+           <figure class="label3"><div style="padding-left:3px">Apps</div></figure>
+           <figure class="card7">
+             <div style="padding-right:3px; text-align:right;">
+               Grill
+               <div class="red-line-separator"></div>
+               <div class="blue-line-separator"></div>
+               <div class="blue-line-separator"></div>
+               <div class="blue-line-separator"></div>
+             </div>
+           </figure>
+         </div>
+       </div>
+       <div class="post-it">Recipe Box</figure>
+     <% end %>
+   </header>    
 
   <body>
     <%= yield %>

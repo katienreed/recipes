@@ -4,10 +4,262 @@
 @import "recipes";
 
 body {
+  width: 75%;
   margin: 0 auto;
-  width: 900px;
 }
 
 a {
   color: #000;
+}
+
+.side-nav.fixed {
+  z-index: 0;
+  padding-top: 143px;
+  padding-left: 50px;
+}
+
+.stage {
+  width: 100px; height: 62px;
+  -webkit-perspective: 1600px;
+  -webkit-perspective-origin: 50% -240px;
+  position: absolute;
+  z-index: 10;
+  left: 65px;
+}
+
+figure {
+  display: block; position: absolute;
+  width: 100px; height: 62px;
+  border: 1px #000 solid;
+  -webkit-transform-origin: 50% 50% 0;
+}
+
+.cube {
+  -webkit-transform-style: preserve-3d;
+  transform: rotateY(35deg);
+}
+figure { -webkit-transform-origin: 50% 50% 0; }
+
+.front {
+  -webkit-transform: translateZ(50px);
+  background: #ee8c25 linear-gradient(
+  to right, #ee8c25 0%, #ee8c25 10%, #e28523 10%, #e28523 20%, #d17b21 19%, #d67e21 21%, #d67e21 20%, #d67e21 30%, #c6741f 29%, #ca7720 31%, #ca7720 30%, #ca7720 40%, #ba6d1d 39%,
+  #be701e 41%, #be701e 40%, #be701e 50%, #ae661b 49%, #b2691c 51%, #b2691c 50%, #b2691c 60%, #a25f19 59%, #a7621a 61%, #a7621a 60%, #a7621a 70%, #965817 69%, #9b5b18 71%, #9b5b18 70%,
+  #9b5b18 80%, #8a5116 79%, #8f5416 81%, #8f5416 80%, #8f5416 90%, #7e4a14 89%, #834d14 91%, #834d14 90%, #834d14 100%);
+}
+
+.back {
+  -webkit-transform: rotateY(180deg) translateZ(50px);
+  background: #ee8c25 linear-gradient(
+  to right, #ee8c25 0%, #ee8c25 10%, #e28523 10%, #e28523 20%, #d17b21 19%, #d67e21 21%, #d67e21 20%, #d67e21 30%, #c6741f 29%, #ca7720 31%, #ca7720 30%, #ca7720 40%, #ba6d1d 39%,
+  #be701e 41%, #be701e 40%, #be701e 50%, #ae661b 49%, #b2691c 51%, #b2691c 50%, #b2691c 60%, #a25f19 59%, #a7621a 61%, #a7621a 60%, #a7621a 70%, #965817 69%, #9b5b18 71%, #9b5b18 70%,
+  #9b5b18 80%, #8a5116 79%, #8f5416 81%, #8f5416 80%, #8f5416 90%, #7e4a14 89%, #834d14 91%, #834d14 90%, #834d14 100%);
+}
+
+.left {
+  -webkit-transform: rotateY(-90deg) translateZ(50px);
+  background: #ee8c25 linear-gradient(
+  to left, #ee8c25 0%, #ee8c25 10%, #e28523 10%, #e28523 20%, #d17b21 19%, #d67e21 21%, #d67e21 20%, #d67e21 30%, #c6741f 29%, #ca7720 31%, #ca7720 30%, #ca7720 40%, #ba6d1d 39%,
+  #be701e 41%, #be701e 40%, #be701e 50%, #ae661b 49%, #b2691c 51%, #b2691c 50%, #b2691c 60%, #a25f19 59%, #a7621a 61%, #a7621a 60%, #a7621a 70%, #965817 69%, #9b5b18 71%, #9b5b18 70%,
+  #9b5b18 80%, #8a5116 79%, #8f5416 81%, #8f5416 80%, #8f5416 90%, #7e4a14 89%, #834d14 91%, #834d14 90%, #834d14 100%);
+}
+
+.right {
+  -webkit-transform: rotateY(90deg) translateZ(50px);
+  background: #ee8c25 linear-gradient(
+  to left, #ee8c25 0%, #ee8c25 10%, #e28523 10%, #e28523 20%, #d17b21 19%, #d67e21 21%, #d67e21 20%, #d67e21 30%, #c6741f 29%, #ca7720 31%, #ca7720 30%, #ca7720 40%, #ba6d1d 39%,
+  #be701e 41%, #be701e 40%, #be701e 50%, #ae661b 49%, #b2691c 51%, #b2691c 50%, #b2691c 60%, #a25f19 59%, #a7621a 61%, #a7621a 60%, #a7621a 70%, #965817 69%, #9b5b18 71%, #9b5b18 70%,
+  #9b5b18 80%, #8a5116 79%, #8f5416 81%, #8f5416 80%, #8f5416 90%, #7e4a14 89%, #834d14 91%, #834d14 90%, #834d14 100%);
+}
+
+.post-it {
+  background: #fefabc;
+  padding: 4px;
+  font-family: 'Gloria Hallelujah', cursive;
+  font-size: 8px;
+  color: #000;
+  width: 46px;
+  -moz-transform: rotate(-9deg);
+  -webkit-transform: rotate(-9deg);
+  -o-transform: rotate(-9deg);
+  -ms-transform: rotate(-9deg);
+  transform: rotate(-9deg);
+  box-shadow: 0px 4px 6px #333;
+  -moz-box-shadow: 0px 4px 6px #333;
+  -webkit-box-shadow: 0px 4px 6px #333;
+  position: absolute;
+  top: 67px;
+  left: 156px;
+  z-index: 11;
+}
+
+.divider {
+  -webkit-transform: translateZ(48px);
+  background: #f5f5dc;
+  top: -11px;
+  height: 30px;
+}
+
+.divider2 {
+  -webkit-transform: translateZ(12px);
+  background: #f5f5dc;
+  top: -14px;
+}
+
+.divider3 {
+  -webkit-transform: translateZ(-25px);
+  background: #f5f5dc;
+  top: -14px;
+}
+
+.label {
+  -webkit-transform: translateZ(49px);
+  background: #f5f5dc;
+  top: -9px;
+  border-bottom: none;
+  border-right: none;
+  border-radius: 3px;
+  font-family: 'Courier New';
+  font-size: 10px;
+  width: 52px;
+}
+
+.label2 {
+  -webkit-transform: translateZ(12px);
+  background: #f5f5dc;
+  top: -10px;
+  border-bottom: none;
+  border-right: none;
+  border-radius: 3px;
+  font-family: 'Courier New';
+  font-size: 10px;
+  width: 52px;
+}
+
+.label3 {
+  -webkit-transform: translateZ(-25px);
+  background: #f5f5dc;
+  top: -10px;
+  border-bottom: none;
+  border-right: none;
+  border-radius: 3px;
+  font-family: 'Courier New';
+  font-size: 10px;
+  width: 52px;
+}
+
+.red-line-separator {
+  height: 1px;
+  border-bottom: 1px solid red;
+  width: 98px;
+  opacity: 0.7;
+}
+
+.blue-line-separator {
+  height: 1px;
+  border-bottom: 1px solid blue;
+  width: 98px;
+  opacity: 0.4;
+  padding-top: 5px;
+}
+
+.card {
+  -webkit-transform: translateZ(40px);
+  background: #FFF;
+  right: -40px;
+  font-size: 10px;
+  top: 3px;
+}
+
+.card2 {
+  -webkit-transform: translateZ(32px);
+  background: #FFF;
+  right: -80px;
+  font-size: 10px;
+  top: -8px;
+}
+
+.card3 {
+  -webkit-transform: translateZ(24px);
+  background: #FFF;
+  font-size: 10px;
+  top: -9px;
+}
+
+.card4 {
+  -webkit-transform: translateZ(3px);
+  background: #FFF;
+  font-size: 10px;
+  top: -5px;
+}
+
+.card5 {
+  -webkit-transform: translateZ(-8px);
+  background: #FFF;
+  font-size: 10px;
+  top: -5px;
+}
+
+.card6 {
+  -webkit-transform: translateZ(-16px);
+  background: #FFF;
+  font-size: 10px;
+  top: -5px;
+}
+
+.card7 {
+  -webkit-transform: translateZ(-30px);
+  background: #FFF;
+  font-size: 10px;
+  top: -5px;
+}
+
+.card:hover {
+  top: -12px;
+  cursor: pointer;
+}
+
+.card2:hover {
+  top: -24px;
+  cursor: pointer;
+}
+
+.card3:hover {
+  top: -24px;
+  cursor: pointer;
+}
+
+.card4:hover {
+  top: -21px;
+  cursor: pointer;
+}
+
+.card5:hover {
+  top: -20px;
+  cursor: pointer;
+}
+
+.card6:hover {
+  top: -19px;
+  cursor: pointer;
+}
+
+.card7:hover {
+  top: -19px;
+  cursor: pointer;
+}
+
+.label:hover {
+  top: -12px;
+  cursor: pointer;
+}
+
+.label2:hover {
+  top: -16px;
+  cursor: pointer;
+}
+
+.label3:hover {
+  top: -12px;
+  cursor: pointer;
 }
