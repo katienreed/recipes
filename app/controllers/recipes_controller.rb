@@ -8,7 +8,7 @@ class RecipesController < ApplicationController
   end
 
   def create
-    @recipe = Recipe.new(article_params)
+    @recipe = Recipe.new(recipe_params)
 
     if @recipe.save
       redirect_to @recipe
@@ -20,7 +20,7 @@ class RecipesController < ApplicationController
   def update
     @recipe = Recipe.find(params[:id])
 
-    if @recipe.update(article_params)
+    if @recipe.update(recipe_params)
       redirect_to @recipe
     else
       render 'edit'
@@ -44,7 +44,7 @@ class RecipesController < ApplicationController
 
   private
 
-    def article_params
-      params.require(:recipe).permit(:title, :directions)
+    def recipe_params
+      params.require(:recipe).permit(:title, :directions, :avatar)
     end
 end
