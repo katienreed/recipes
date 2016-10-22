@@ -3,9 +3,19 @@
 @import "home";
 @import "recipes";
 
-body {
-  width: 75%;
-  margin: 0 auto;
+.container {
+  width: 76%;
+  height: 100%;
+  background: 0.5;
+  margin-left: 303px;
+}
+
+header {
+  height: 0px;
+}
+
+.side-nav .collapsible-body li.active, .side-nav.fixed .collapsible-body li.active {
+  background-color: #4db6ac;
 }
 
 a {
@@ -14,7 +24,7 @@ a {
 
 .side-nav.fixed {
   z-index: 0;
-  padding-top: 143px;
+  padding-top: 175px;
   padding-left: 50px;
 }
 
@@ -25,6 +35,7 @@ a {
   position: absolute;
   z-index: 10;
   left: 65px;
+  top: 40px
 }
 
 figure {
@@ -88,7 +99,7 @@ figure { -webkit-transform-origin: 50% 50% 0; }
   -moz-box-shadow: 0px 4px 6px #333;
   -webkit-box-shadow: 0px 4px 6px #333;
   position: absolute;
-  top: 67px;
+  top: 84px;
   left: 156px;
   z-index: 11;
 }
